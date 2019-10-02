@@ -1,3 +1,15 @@
+修改主机名
+```
+hostnamectl set-hostname <hostname>
+```
+
+修改ip
+```
+vi /etc/sysconfig/network-scripts/ifcfg-enp0s3
+
+service network restart
+```
+
 停防火墙
 ```
 systemctl stop firewalld && systemctl disable firewalld
@@ -19,7 +31,6 @@ sed -i "s/#UseDNS yes/UseDNS no/g" /etc/ssh/sshd_config
 systemctl enable chronyd && systemctl start chronyd
 
 chronyc sources
-
 ```
 
 yum 加速
@@ -35,3 +46,5 @@ yum makecache fast
 ```
 yum install -y wget net-tools
 ```
+
+
