@@ -28,9 +28,7 @@ sed -i "s/#UseDNS yes/UseDNS no/g" /etc/ssh/sshd_config
 
 时间同步
 ```
-systemctl enable chronyd && systemctl start chronyd
-
-chronyc sources
+systemctl enable chronyd && systemctl start chronyd && chronyc sources
 ```
 
 yum 加速
