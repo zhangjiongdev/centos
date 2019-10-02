@@ -19,7 +19,7 @@ defaults
     timeout server 50000ms
 
 listen registry
-    bind *:5000
+    bind *:6000
     mode tcp
     balance roundrobin
     server registry 30.0.0.11:5000 check port 5000 inter 1000 rise 2 fall 2 maxconn 32
