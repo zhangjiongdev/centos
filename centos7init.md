@@ -31,6 +31,11 @@ sed -i "s/#UseDNS yes/UseDNS no/g" /etc/ssh/sshd_config
 systemctl enable chronyd && systemctl start chronyd && chronyc sources
 ```
 
+重启服务器
+```
+reboot
+```
+
 yum 加速
 ```
 curl -o /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
